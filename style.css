@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.preferences {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label,
+select {
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.animation-box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Animation Classes */
+.bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.color-change {
+    animation: colorChange 3s ease infinite;
+}
+
+/* Animation Keyframes */
+/* Bounce Animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Color Change Animation */
+@keyframes colorChange {
+    0% {
+        background-color: #3498db;
+    }
+
+    25% {
+        background-color: #2ecc71;
+    }
+
+    50% {
+        background-color: #9b59b6;
+    }
+
+    75% {
+        background-color: #e74c3c;
+    }
+
+    100% {
+        background-color: #3498db;
+    }
+}
+
+/* Animation Speeds */
+.slow {
+    animation-duration: 3s;
+}
+
+.normal {
+    animation-duration: 1s;
+}
+
+.fast {
+    animation-duration: 0.5s;
+}
